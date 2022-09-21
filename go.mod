@@ -7,7 +7,7 @@ require (
 	github.com/aws/aws-sdk-go v1.26.3
 	github.com/brocaar/chirpstack-api/go/v3 v3.12.5
 	github.com/brocaar/lorawan v0.0.0-20211122090658-49524ce5fb5b
-	github.com/coreos/go-oidc v2.2.1+incompatible
+	github.com/coreos/go-oidc/v3 v3.2.1
 	github.com/eclipse/paho.mqtt.golang v1.3.1
 	github.com/go-redis/redis/v8 v8.8.3
 	github.com/gofrs/uuid v3.2.0+incompatible
@@ -23,11 +23,10 @@ require (
 	github.com/grpc-ecosystem/go-grpc-prometheus v1.2.0
 	github.com/grpc-ecosystem/grpc-gateway v1.12.1
 	github.com/jmoiron/sqlx v1.2.0
-	github.com/lib/pq v1.10.2
+	github.com/lib/pq v1.10.4
 	github.com/mmcloughlin/geohash v0.9.0
 	github.com/pelletier/go-toml v1.6.0 // indirect
 	github.com/pkg/errors v0.9.1
-	github.com/pquerna/cachecontrol v0.0.0-20180517163645-1555304b9b35 // indirect
 	github.com/prometheus/client_golang v1.2.1
 	github.com/prometheus/client_model v0.0.0-20191202183732-d1d2010b5bee // indirect
 	github.com/prometheus/procfs v0.0.8 // indirect
@@ -51,5 +50,7 @@ require (
 	golang.org/x/tools v0.0.0-20210106214847-113979e3529a
 	google.golang.org/grpc v1.33.1
 	gopkg.in/sourcemap.v1 v1.0.5 // indirect
-	gopkg.in/square/go-jose.v2 v2.5.1 // indirect
+	gopkg.in/square/go-jose.v2 v2.6.0 // indirect
 )
+
+replace github.com/coreos/go-oidc/v3 => github.com/deepshore/go-oidc/v3 v3.2.2

@@ -10,7 +10,7 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/coreos/go-oidc"
+	"github.com/coreos/go-oidc/v3/oidc"
 	"github.com/golang-jwt/jwt/v4"
 	"github.com/gorilla/mux"
 	"github.com/pkg/errors"
@@ -119,7 +119,7 @@ func newAuthenticator(ctx context.Context) (*authenticator, error) {
 		ClientSecret: clientSecret,
 		RedirectURL:  redirectURL,
 		Endpoint:     provider.Endpoint(),
-		Scopes:       []string{oidc.ScopeOpenID, "profile", "email"},
+		Scopes:       []string{oidc.ScopeOpenID, "profile", "email", "chirpstack"},
 	}
 
 	return &authenticator{
